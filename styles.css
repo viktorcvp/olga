@@ -278,6 +278,7 @@ h2 {
     text-decoration: none;
 }
 
+/* Форма контактов */
 .contact-form {
     max-width: 600px;
     margin: 2rem auto;
@@ -288,10 +289,109 @@ h2 {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
+    padding: 14px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #6b5b95;
+    box-shadow: 0 0 0 3px rgba(107, 91, 149, 0.1);
+}
+
+.contact-form button {
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ЧЕКБОКС СОГЛАСИЯ */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #6b5b95;
+    text-align: left;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #6b5b95;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-group label a {
+    color: #6b5b95;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.checkbox-group label a:hover {
+    text-decoration: none;
+    color: #88b04b;
+}
+
+/* ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ */
+.policy-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 20px;
+}
+
+.policy-page h1 {
+    color: #6b5b95;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+}
+
+.policy-date {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.policy-content h2 {
+    color: #6b5b95;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.policy-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.policy-content ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.policy-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
 }
 
 /* Footer */
@@ -300,6 +400,15 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #fff;
 }
 
 /* Адаптивность */
@@ -315,5 +424,33 @@ footer {
     
     .contact-links {
         flex-direction: column;
+    }
+
+    .policy-page {
+        padding: 2rem 15px;
+    }
+    
+    .policy-page h1 {
+        font-size: 1.8rem;
+    }
+    
+    .policy-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .checkbox-group {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0.8rem;
+    }
+    
+    .checkbox-group input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-top: 3px;
+    }
+    
+    .checkbox-group label {
+        font-size: 0.85rem;
     }
 }
